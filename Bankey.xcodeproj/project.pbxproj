@@ -24,7 +24,18 @@
 		D75CD9D52B53DDD900A0B168 /* AccountSummaryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D75CD9D42B53DDD900A0B168 /* AccountSummaryCell.swift */; };
 		D75CD9D72B53F3A100A0B168 /* Decimal+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = D75CD9D62B53F3A100A0B168 /* Decimal+Utils.swift */; };
 		D75CD9D92B53F3EA00A0B168 /* CurrencyFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D75CD9D82B53F3EA00A0B168 /* CurrencyFormatter.swift */; };
+		D75CD9E82B54298F00A0B168 /* CurrencyFormatterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D75CD9E72B54298F00A0B168 /* CurrencyFormatterTest.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D75CD9E22B5428D100A0B168 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D75CD9942B4DE37700A0B168 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D75CD99B2B4DE37700A0B168;
+			remoteInfo = Bankey;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		D75CD99C2B4DE37700A0B168 /* Bankey.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bankey.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -46,10 +57,19 @@
 		D75CD9D42B53DDD900A0B168 /* AccountSummaryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountSummaryCell.swift; sourceTree = "<group>"; };
 		D75CD9D62B53F3A100A0B168 /* Decimal+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Decimal+Utils.swift"; sourceTree = "<group>"; };
 		D75CD9D82B53F3EA00A0B168 /* CurrencyFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyFormatter.swift; sourceTree = "<group>"; };
+		D75CD9DE2B5428D000A0B168 /* BankeyUnitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BankeyUnitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D75CD9E72B54298F00A0B168 /* CurrencyFormatterTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyFormatterTest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		D75CD9992B4DE37700A0B168 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D75CD9DB2B5428D000A0B168 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -63,6 +83,7 @@
 			isa = PBXGroup;
 			children = (
 				D75CD99E2B4DE37700A0B168 /* Bankey */,
+				D75CD9DF2B5428D100A0B168 /* BankeyUnitTests */,
 				D75CD99D2B4DE37700A0B168 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -71,6 +92,7 @@
 			isa = PBXGroup;
 			children = (
 				D75CD99C2B4DE37700A0B168 /* Bankey.app */,
+				D75CD9DE2B5428D000A0B168 /* BankeyUnitTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -156,6 +178,14 @@
 			path = Cells;
 			sourceTree = "<group>";
 		};
+		D75CD9DF2B5428D100A0B168 /* BankeyUnitTests */ = {
+			isa = PBXGroup;
+			children = (
+				D75CD9E72B54298F00A0B168 /* CurrencyFormatterTest.swift */,
+			);
+			path = BankeyUnitTests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -176,6 +206,24 @@
 			productReference = D75CD99C2B4DE37700A0B168 /* Bankey.app */;
 			productType = "com.apple.product-type.application";
 		};
+		D75CD9DD2B5428D000A0B168 /* BankeyUnitTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D75CD9E42B5428D100A0B168 /* Build configuration list for PBXNativeTarget "BankeyUnitTests" */;
+			buildPhases = (
+				D75CD9DA2B5428D000A0B168 /* Sources */,
+				D75CD9DB2B5428D000A0B168 /* Frameworks */,
+				D75CD9DC2B5428D000A0B168 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D75CD9E32B5428D100A0B168 /* PBXTargetDependency */,
+			);
+			name = BankeyUnitTests;
+			productName = BankeyUnitTests;
+			productReference = D75CD9DE2B5428D000A0B168 /* BankeyUnitTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -188,6 +236,11 @@
 				TargetAttributes = {
 					D75CD99B2B4DE37700A0B168 = {
 						CreatedOnToolsVersion = 14.3.1;
+					};
+					D75CD9DD2B5428D000A0B168 = {
+						CreatedOnToolsVersion = 14.3.1;
+						LastSwiftMigration = 1430;
+						TestTargetID = D75CD99B2B4DE37700A0B168;
 					};
 				};
 			};
@@ -205,6 +258,7 @@
 			projectRoot = "";
 			targets = (
 				D75CD99B2B4DE37700A0B168 /* Bankey */,
+				D75CD9DD2B5428D000A0B168 /* BankeyUnitTests */,
 			);
 		};
 /* End PBXProject section */
@@ -217,6 +271,13 @@
 				D75CD9CD2B52A3B900A0B168 /* AccountSummaryHeaderView.xib in Resources */,
 				D75CD9AC2B4DE37900A0B168 /* LaunchScreen.storyboard in Resources */,
 				D75CD9A92B4DE37900A0B168 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D75CD9DC2B5428D000A0B168 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -244,7 +305,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		D75CD9DA2B5428D000A0B168 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D75CD9E82B54298F00A0B168 /* CurrencyFormatterTest.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D75CD9E32B5428D100A0B168 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D75CD99B2B4DE37700A0B168 /* Bankey */;
+			targetProxy = D75CD9E22B5428D100A0B168 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		D75CD9AA2B4DE37900A0B168 /* LaunchScreen.storyboard */ = {
@@ -426,6 +503,45 @@
 			};
 			name = Release;
 		};
+		D75CD9E52B5428D100A0B168 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = PG8FB2GHQZ;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Gulfem.BankeyUnitTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Bankey.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Bankey";
+			};
+			name = Debug;
+		};
+		D75CD9E62B5428D100A0B168 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = PG8FB2GHQZ;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Gulfem.BankeyUnitTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Bankey.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Bankey";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -443,6 +559,15 @@
 			buildConfigurations = (
 				D75CD9B12B4DE37900A0B168 /* Debug */,
 				D75CD9B22B4DE37900A0B168 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D75CD9E42B5428D100A0B168 /* Build configuration list for PBXNativeTarget "BankeyUnitTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D75CD9E52B5428D100A0B168 /* Debug */,
+				D75CD9E62B5428D100A0B168 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
