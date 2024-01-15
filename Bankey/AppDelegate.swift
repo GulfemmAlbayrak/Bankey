@@ -10,8 +10,8 @@ let appColor: UIColor = .systemTeal
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
-    var window: UIWindow?
     
+    var window: UIWindow?
     let loginViewController = LoginViewController()
     let onboardingContainerViewController = OnboardingContainerViewController()
     let mainViewController = MainViewController()
@@ -24,17 +24,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         loginViewController.delegate = self
         onboardingContainerViewController.delegate = self
         
+        registerForNotifications()
+        
         displayLogin()
         return true
     }
-    
+    private func registerForNotifications() {
+        NotificationCenter.default.addObserver(self, selector: #selector(didLogout), name: .logout, object: nil)
+    }
     private func displayLogin() {
         setRootViewController(loginViewController)
     }
     private func displayNextScreen() {
         if LocalState.hasOnboarded {
             prepMainView()
-            setRootViewController(onboardingContainerViewController)
+            setRootViewController(mainViewController)
         } else {
             setRootViewController(onboardingContainerViewController)
         }
@@ -76,8 +80,10 @@ extension AppDelegate: OnboardingContainerViewControllerDelegate {
     }
 }
 extension AppDelegate: LogoutDelegate {
-    func didLogout() {
+ @objc func didLogout() {
         setRootViewController(loginViewController)
+//     loginViewController.loginView.usernameTextField. =
+//     loginViewController.loginView.passwordTextField =
     }
     
     
